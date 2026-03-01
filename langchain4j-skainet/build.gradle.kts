@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.2.21"
-    kotlin("plugin.serialization") version "2.2.21"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -9,21 +9,21 @@ kotlin {
 
 dependencies {
     // LangChain4j core API
-    api("dev.langchain4j:langchain4j-core:${project.property("langchain4jVersion")}")
+    api(libs.langchain4j.core)
 
-    // SKaiNET modules (resolved via composite build)
-    implementation("sk.ainet:skainet-kllama")
-    implementation("sk.ainet:skainet-kllama-agent")
-    implementation("sk.ainet:skainet-bert")
-    implementation("sk.ainet:skainet-llm")
-    implementation("sk.ainet:skainet-backend-cpu")
-    implementation("sk.ainet:skainet-lang-core")
-    implementation("sk.ainet:skainet-compile-core")
-    implementation("sk.ainet:skainet-io-core")
-    implementation("sk.ainet:skainet-io-gguf")
-    implementation("sk.ainet:skainet-io-safetensors")
+    // SKaiNET modules
+    implementation(libs.skainet.kllama)
+    implementation(libs.skainet.kllama.agent)
+    implementation(libs.skainet.bert)
+    implementation(libs.skainet.llm)
+    implementation(libs.skainet.backend.cpu)
+    implementation(libs.skainet.lang.core)
+    implementation(libs.skainet.compile.core)
+    implementation(libs.skainet.io.core)
+    implementation(libs.skainet.io.gguf)
+    implementation(libs.skainet.io.safetensors)
 
     // Kotlin coroutines & serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.serialization.json)
 }

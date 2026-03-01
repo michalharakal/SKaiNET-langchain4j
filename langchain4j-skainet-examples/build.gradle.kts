@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.2.21"
+    alias(libs.plugins.kotlin.jvm)
 }
 
 kotlin {
@@ -8,8 +8,8 @@ kotlin {
 
 dependencies {
     implementation(project(":langchain4j-skainet"))
-    implementation("dev.langchain4j:langchain4j:${project.property("langchain4jVersion")}")
-    implementation("ch.qos.logback:logback-classic:${project.property("logbackVersion")}")
+    implementation(libs.langchain4j)
+    implementation(libs.logback.classic)
 }
 
 val jvmArgs = listOf(

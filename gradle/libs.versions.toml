@@ -1,0 +1,29 @@
+[versions]
+kotlin = "2.2.21"
+langchain4j = "1.11.0"
+logback = "1.5.6"
+kotlinx-coroutines = "1.10.2"
+kotlinx-serialization = "1.9.0"
+skainet = "0.13.0"
+
+[libraries]
+langchain4j-core = { module = "dev.langchain4j:langchain4j-core", version.ref = "langchain4j" }
+langchain4j = { module = "dev.langchain4j:langchain4j", version.ref = "langchain4j" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+skainet-kllama = { module = "sk.ainet.core:skainet-apps-kllama", version.ref = "skainet" }
+skainet-kllama-agent = { module = "sk.ainet.core:skainet-apps-kllama-agent", version.ref = "skainet" }
+skainet-bert = { module = "sk.ainet.core:skainet-apps-bert", version.ref = "skainet" }
+skainet-llm = { module = "sk.ainet.core:skainet-llm", version.ref = "skainet" }
+skainet-backend-cpu = { module = "sk.ainet.core:skainet-backend-cpu", version.ref = "skainet" }
+skainet-lang-core = { module = "sk.ainet.core:skainet-lang-core", version.ref = "skainet" }
+skainet-compile-core = { module = "sk.ainet.core:skainet-compile-core", version.ref = "skainet" }
+skainet-io-core = { module = "sk.ainet.core:skainet-io-core", version.ref = "skainet" }
+skainet-io-gguf = { module = "sk.ainet.core:skainet-io-gguf", version.ref = "skainet" }
+skainet-io-safetensors = { module = "sk.ainet.core:skainet-io-safetensors", version.ref = "skainet" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
